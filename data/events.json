@@ -1,0 +1,274 @@
+{
+  "sf": [
+    {
+      "title": "San Francisco Tech Networking Mixer",
+      "description": "Join fellow tech professionals for networking and drinks in San Francisco / Bay Area.",
+      "start_time": "2026-02-12T10:27:21.416594",
+      "end_time": "2026-02-12T13:27:21.416606",
+      "location": "The Battery, San Francisco",
+      "price": "Free",
+      "url": "https://example.com/event1",
+      "source": "Meetup",
+      "image": ""
+    },
+    {
+      "title": "San Francisco Tech Networking Mixer",
+      "description": "Join fellow tech professionals for networking and drinks in San Francisco / Bay Area.",
+      "start_time": "2026-02-12T10:27:21.416624",
+      "end_time": "2026-02-12T13:27:21.416627",
+      "location": "The Battery, San Francisco",
+      "price": "Free",
+      "url": "https://example.com/event1",
+      "source": "Luma",
+      "image": ""
+    },
+    {
+      "title": "Startup Founders Breakfast",
+      "description": "Monthly breakfast meetup for startup founders and entrepreneurs.",
+      "start_time": "2026-02-15T01:27:21.416610",
+      "end_time": "2026-02-15T03:27:21.416612",
+      "location": "Philz Coffee, Palo Alto, San Francisco",
+      "price": "$15",
+      "url": "https://example.com/event2",
+      "source": "Meetup",
+      "image": ""
+    },
+    {
+      "title": "Startup Founders Breakfast",
+      "description": "Monthly breakfast meetup for startup founders and entrepreneurs.",
+      "start_time": "2026-02-15T01:27:21.416630",
+      "end_time": "2026-02-15T03:27:21.416632",
+      "location": "Philz Coffee, Palo Alto, San Francisco",
+      "price": "$15",
+      "url": "https://example.com/event2",
+      "source": "Luma",
+      "image": ""
+    },
+    {
+      "title": "AI & Machine Learning Workshop",
+      "description": "Hands-on workshop covering the latest in AI/ML technologies and practical applications.",
+      "start_time": "2026-02-18T06:27:21.416615",
+      "end_time": "2026-02-18T09:27:21.416617",
+      "location": "GitHub HQ, San Francisco",
+      "price": "$45",
+      "url": "https://example.com/event3",
+      "source": "Meetup",
+      "image": ""
+    },
+    {
+      "title": "AI & Machine Learning Workshop",
+      "description": "Hands-on workshop covering the latest in AI/ML technologies and practical applications.",
+      "start_time": "2026-02-18T06:27:21.416634",
+      "end_time": "2026-02-18T09:27:21.416636",
+      "location": "GitHub HQ, San Francisco",
+      "price": "$45",
+      "url": "https://example.com/event3",
+      "source": "Luma",
+      "image": ""
+    }
+  ],
+  "la": [
+    {
+      "title": "Los Angeles Tech Networking Mixer",
+      "description": "Join fellow tech professionals for networking and drinks in Los Angeles.",
+      "start_time": "2026-02-12T10:27:21.584877",
+      "end_time": "2026-02-12T13:27:21.584885",
+      "location": "WeWork DTLA, Los Angeles",
+      "price": "Free",
+      "url": "https://example.com/event1",
+      "source": "Meetup",
+      "image": ""
+    },
+    {
+      "title": "Los Angeles Tech Networking Mixer",
+      "description": "Join fellow tech professionals for networking and drinks in Los Angeles.",
+      "start_time": "2026-02-12T10:27:21.584896",
+      "end_time": "2026-02-12T13:27:21.584898",
+      "location": "WeWork DTLA, Los Angeles",
+      "price": "Free",
+      "url": "https://example.com/event1",
+      "source": "Luma",
+      "image": ""
+    },
+    {
+      "title": "Startup Founders Breakfast",
+      "description": "Monthly breakfast meetup for startup founders and entrepreneurs.",
+      "start_time": "2026-02-15T01:27:21.584888",
+      "end_time": "2026-02-15T03:27:21.584889",
+      "location": "The Arts District, Los Angeles",
+      "price": "$15",
+      "url": "https://example.com/event2",
+      "source": "Meetup",
+      "image": ""
+    },
+    {
+      "title": "Startup Founders Breakfast",
+      "description": "Monthly breakfast meetup for startup founders and entrepreneurs.",
+      "start_time": "2026-02-15T01:27:21.584899",
+      "end_time": "2026-02-15T03:27:21.584900",
+      "location": "The Arts District, Los Angeles",
+      "price": "$15",
+      "url": "https://example.com/event2",
+      "source": "Luma",
+      "image": ""
+    },
+    {
+      "title": "AI & Machine Learning Workshop",
+      "description": "Hands-on workshop covering the latest in AI/ML technologies and practical applications.",
+      "start_time": "2026-02-18T06:27:21.584891",
+      "end_time": "2026-02-18T09:27:21.584892",
+      "location": "Santa Monica Pier, Los Angeles",
+      "price": "$45",
+      "url": "https://example.com/event3",
+      "source": "Meetup",
+      "image": ""
+    },
+    {
+      "title": "AI & Machine Learning Workshop",
+      "description": "Hands-on workshop covering the latest in AI/ML technologies and practical applications.",
+      "start_time": "2026-02-18T06:27:21.584902",
+      "end_time": "2026-02-18T09:27:21.584903",
+      "location": "Santa Monica Pier, Los Angeles",
+      "price": "$45",
+      "url": "https://example.com/event3",
+      "source": "Luma",
+      "image": ""
+    }
+  ],
+  "nyc": [
+    {
+      "title": "New York City Tech Networking Mixer",
+      "description": "Join fellow tech professionals for networking and drinks in New York City.",
+      "start_time": "2026-02-12T10:25:20.063437",
+      "end_time": "2026-02-12T13:25:20.063446",
+      "location": "WeWork SoHo, New York City",
+      "price": "Free",
+      "url": "https://example.com/event1",
+      "source": "Meetup",
+      "image": ""
+    },
+    {
+      "title": "New York City Tech Networking Mixer",
+      "description": "Join fellow tech professionals for networking and drinks in New York City.",
+      "start_time": "2026-02-12T10:25:20.063459",
+      "end_time": "2026-02-12T13:25:20.063461",
+      "location": "WeWork SoHo, New York City",
+      "price": "Free",
+      "url": "https://example.com/event1",
+      "source": "Luma",
+      "image": ""
+    },
+    {
+      "title": "Startup Founders Breakfast",
+      "description": "Monthly breakfast meetup for startup founders and entrepreneurs.",
+      "start_time": "2026-02-15T01:25:20.063449",
+      "end_time": "2026-02-15T03:25:20.063451",
+      "location": "Brooklyn Tech Hub, New York City",
+      "price": "$15",
+      "url": "https://example.com/event2",
+      "source": "Meetup",
+      "image": ""
+    },
+    {
+      "title": "Startup Founders Breakfast",
+      "description": "Monthly breakfast meetup for startup founders and entrepreneurs.",
+      "start_time": "2026-02-15T01:25:20.063463",
+      "end_time": "2026-02-15T03:25:20.063465",
+      "location": "Brooklyn Tech Hub, New York City",
+      "price": "$15",
+      "url": "https://example.com/event2",
+      "source": "Luma",
+      "image": ""
+    },
+    {
+      "title": "AI & Machine Learning Workshop",
+      "description": "Hands-on workshop covering the latest in AI/ML technologies and practical applications.",
+      "start_time": "2026-02-18T06:25:20.063453",
+      "end_time": "2026-02-18T09:25:20.063454",
+      "location": "Madison Square Garden, New York City",
+      "price": "$45",
+      "url": "https://example.com/event3",
+      "source": "Meetup",
+      "image": ""
+    },
+    {
+      "title": "AI & Machine Learning Workshop",
+      "description": "Hands-on workshop covering the latest in AI/ML technologies and practical applications.",
+      "start_time": "2026-02-18T06:25:20.063466",
+      "end_time": "2026-02-18T09:25:20.063468",
+      "location": "Madison Square Garden, New York City",
+      "price": "$45",
+      "url": "https://example.com/event3",
+      "source": "Luma",
+      "image": ""
+    }
+  ],
+  "chicago": [
+    {
+      "title": "Chicago Tech Networking Mixer",
+      "description": "Join fellow tech professionals for networking and drinks in Chicago.",
+      "start_time": "2026-02-12T10:27:21.806447",
+      "end_time": "2026-02-12T13:27:21.806454",
+      "location": "1871 Tech Hub, Chicago",
+      "price": "Free",
+      "url": "https://example.com/event1",
+      "source": "Meetup",
+      "image": ""
+    },
+    {
+      "title": "Chicago Tech Networking Mixer",
+      "description": "Join fellow tech professionals for networking and drinks in Chicago.",
+      "start_time": "2026-02-12T10:27:21.806464",
+      "end_time": "2026-02-12T13:27:21.806466",
+      "location": "1871 Tech Hub, Chicago",
+      "price": "Free",
+      "url": "https://example.com/event1",
+      "source": "Luma",
+      "image": ""
+    },
+    {
+      "title": "Startup Founders Breakfast",
+      "description": "Monthly breakfast meetup for startup founders and entrepreneurs.",
+      "start_time": "2026-02-15T01:27:21.806457",
+      "end_time": "2026-02-15T03:27:21.806458",
+      "location": "The Loop Co-working, Chicago",
+      "price": "$15",
+      "url": "https://example.com/event2",
+      "source": "Meetup",
+      "image": ""
+    },
+    {
+      "title": "Startup Founders Breakfast",
+      "description": "Monthly breakfast meetup for startup founders and entrepreneurs.",
+      "start_time": "2026-02-15T01:27:21.806467",
+      "end_time": "2026-02-15T03:27:21.806468",
+      "location": "The Loop Co-working, Chicago",
+      "price": "$15",
+      "url": "https://example.com/event2",
+      "source": "Luma",
+      "image": ""
+    },
+    {
+      "title": "AI & Machine Learning Workshop",
+      "description": "Hands-on workshop covering the latest in AI/ML technologies and practical applications.",
+      "start_time": "2026-02-18T06:27:21.806460",
+      "end_time": "2026-02-18T09:27:21.806461",
+      "location": "Navy Pier, Chicago",
+      "price": "$45",
+      "url": "https://example.com/event3",
+      "source": "Meetup",
+      "image": ""
+    },
+    {
+      "title": "AI & Machine Learning Workshop",
+      "description": "Hands-on workshop covering the latest in AI/ML technologies and practical applications.",
+      "start_time": "2026-02-18T06:27:21.806470",
+      "end_time": "2026-02-18T09:27:21.806471",
+      "location": "Navy Pier, Chicago",
+      "price": "$45",
+      "url": "https://example.com/event3",
+      "source": "Luma",
+      "image": ""
+    }
+  ]
+}
