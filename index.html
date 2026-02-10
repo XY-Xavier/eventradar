@@ -79,37 +79,31 @@
     <!-- Stats Bar -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white/90 backdrop-blur rounded-2xl shadow-lg p-6 stat-card border border-purple-100">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <p class="text-sm font-medium text-gray-600 mb-1">Total Events</p>
-                        <p class="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent" id="totalCount">0</p>
+            <div class="bg-white/90 backdrop-blur rounded-2xl shadow-lg p-8 stat-card border border-purple-100">
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-indigo-100 to-purple-100 p-4 rounded-2xl inline-block mb-4">
+                        <i class="fas fa-calendar-alt text-indigo-600 text-4xl"></i>
                     </div>
-                    <div class="bg-gradient-to-br from-indigo-100 to-purple-100 p-4 rounded-xl">
-                        <i class="fas fa-calendar-alt text-indigo-600 text-3xl"></i>
-                    </div>
+                    <p class="text-5xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-2" id="totalCount">0</p>
+                    <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Total Events</p>
                 </div>
             </div>
-            <div class="bg-white/90 backdrop-blur rounded-2xl shadow-lg p-6 stat-card border border-green-100">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <p class="text-sm font-medium text-gray-600 mb-1">Free Events</p>
-                        <p class="text-3xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent" id="freeCount">0</p>
+            <div class="bg-white/90 backdrop-blur rounded-2xl shadow-lg p-8 stat-card border border-green-100">
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-green-100 to-emerald-100 p-4 rounded-2xl inline-block mb-4">
+                        <i class="fas fa-ticket-alt text-green-600 text-4xl"></i>
                     </div>
-                    <div class="bg-gradient-to-br from-green-100 to-emerald-100 p-4 rounded-xl">
-                        <i class="fas fa-ticket-alt text-green-600 text-3xl"></i>
-                    </div>
+                    <p class="text-5xl font-extrabold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-2" id="freeCount">0</p>
+                    <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Free Events</p>
                 </div>
             </div>
-            <div class="bg-white/90 backdrop-blur rounded-2xl shadow-lg p-6 stat-card border border-pink-100">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <p class="text-sm font-medium text-gray-600 mb-1">This Week</p>
-                        <p class="text-3xl font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent" id="weekCount">0</p>
+            <div class="bg-white/90 backdrop-blur rounded-2xl shadow-lg p-8 stat-card border border-pink-100">
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-pink-100 to-rose-100 p-4 rounded-2xl inline-block mb-4">
+                        <i class="fas fa-clock text-pink-600 text-4xl"></i>
                     </div>
-                    <div class="bg-gradient-to-br from-pink-100 to-rose-100 p-4 rounded-xl">
-                        <i class="fas fa-clock text-pink-600 text-3xl"></i>
-                    </div>
+                    <p class="text-5xl font-extrabold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent mb-2" id="weekCount">0</p>
+                    <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">This Week</p>
                 </div>
             </div>
         </div>
