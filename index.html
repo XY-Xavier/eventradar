@@ -6,7 +6,7 @@
     <title>EventRadar - Discover Events</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
         
@@ -16,84 +16,96 @@
         }
         
         .event-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             animation: fadeIn 0.6s ease-out;
-            overflow: hidden;
         }
         
         .event-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
         }
         
-        .event-card img {
-            transition: transform 0.6s ease;
+        .event-image {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .event-card:hover img {
-            transform: scale(1.08);
+        .event-card:hover .event-image {
+            transform: scale(1.05);
         }
         
-        .stat-number {
-            background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #5568d3 0%, #63408a 100%);
+            box-shadow: 0 20px 25px -5px rgba(102, 126, 234, 0.3);
         }
     </style>
 </head>
-<body class="bg-[#fafaf9] text-[#2d3436]">
+<body class="bg-[#fafaf9] text-gray-900">
     <!-- Header -->
-    <header class="bg-white border-b border-gray-100 sticky top-0 z-50 backdrop-blur-sm bg-white/95">
-        <div class="max-w-7xl mx-auto px-6 py-5">
-            <div class="flex items-center justify-between">
+    <header class="bg-white/80 backdrop-blur-lg border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-6">
+            <div class="flex items-center justify-between flex-wrap gap-4">
                 <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-[#2d3436] rounded-xl flex items-center justify-center">
-                        <i class="fas fa-calendar-alt text-white text-lg"></i>
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg">
+                        <i class="fas fa-compass text-white text-xl"></i>
                     </div>
-                    <h1 class="text-2xl font-bold text-[#2d3436] tracking-tight">EventRadar</h1>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-900 tracking-tight">EventRadar</h1>
+                        <p class="text-sm text-gray-500 font-medium" id="citySubtitle">Multi-City Events</p>
+                    </div>
                 </div>
-                <select id="citySelector" class="px-6 py-2.5 bg-white border border-gray-200 rounded-xl text-sm font-medium text-gray-700 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-900 transition cursor-pointer">
-                    <option value="sf">San Francisco</option>
-                    <option value="la">Los Angeles</option>
-                    <option value="nyc">New York City</option>
-                    <option value="chicago">Chicago</option>
+                <select id="citySelector" class="px-5 py-2.5 border border-gray-200 rounded-xl font-medium text-gray-700 bg-white hover:border-purple-300 focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500 focus:outline-none cursor-pointer transition">
+                    <option value="sf">📍 San Francisco</option>
+                    <option value="la">📍 Los Angeles</option>
+                    <option value="nyc">📍 New York City</option>
+                    <option value="chicago">📍 Chicago</option>
                 </select>
             </div>
         </div>
     </header>
 
     <!-- Stats -->
-    <div class="max-w-7xl mx-auto px-6 py-12">
-        <div class="grid grid-cols-3 gap-8">
-            <div class="text-center">
-                <p class="text-5xl font-bold stat-number mb-2" id="totalCount">0</p>
-                <p class="text-sm font-medium text-gray-500 uppercase tracking-wider">Events</p>
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition text-center">
+                <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Total Events</p>
+                <p class="text-3xl font-bold text-gray-900" id="totalCount">0</p>
             </div>
-            <div class="text-center">
-                <p class="text-5xl font-bold stat-number mb-2" id="freeCount">0</p>
-                <p class="text-sm font-medium text-gray-500 uppercase tracking-wider">Free</p>
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition text-center">
+                <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Free Events</p>
+                <p class="text-3xl font-bold bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent" id="freeCount">0</p>
             </div>
-            <div class="text-center">
-                <p class="text-5xl font-bold stat-number mb-2" id="weekCount">0</p>
-                <p class="text-sm font-medium text-gray-500 uppercase tracking-wider">This Week</p>
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition text-center">
+                <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">This Week</p>
+                <p class="text-3xl font-bold bg-gradient-to-r from-purple-500 to-indigo-600 bg-clip-text text-transparent" id="weekCount">0</p>
+            </div>
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition text-center">
+                <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Cities</p>
+                <p class="text-3xl font-bold text-gray-900">4</p>
             </div>
         </div>
     </div>
 
     <!-- Filters -->
-    <div class="max-w-7xl mx-auto px-6 pb-8">
-        <div class="flex items-center gap-4">
-            <div class="flex-1">
-                <input type="text" id="searchInput" placeholder="Search events..." 
-                       class="w-full px-5 py-3 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 transition">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 pb-8">
+        <div class="flex flex-wrap items-center gap-3">
+            <div class="flex-1 min-w-[240px]">
+                <div class="relative">
+                    <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" id="searchInput" placeholder="Search events..." 
+                           class="w-full pl-11 pr-4 py-2.5 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500 focus:outline-none transition">
+                </div>
             </div>
-            <select id="priceFilter" class="px-5 py-3 bg-white border border-gray-200 rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-gray-900 transition cursor-pointer">
+            <select id="priceFilter" class="px-4 py-2.5 bg-white border border-gray-200 rounded-xl font-medium text-gray-700 focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500 focus:outline-none transition cursor-pointer">
                 <option value="all">All Prices</option>
-                <option value="free">Free</option>
-                <option value="paid">Paid</option>
+                <option value="free">Free Only</option>
+                <option value="paid">Paid Events</option>
             </select>
-            <select id="timeFilter" class="px-5 py-3 bg-white border border-gray-200 rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-gray-900 transition cursor-pointer">
+            <select id="timeFilter" class="px-4 py-2.5 bg-white border border-gray-200 rounded-xl font-medium text-gray-700 focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500 focus:outline-none transition cursor-pointer">
                 <option value="all">All Time</option>
                 <option value="today">Today</option>
                 <option value="week">This Week</option>
@@ -103,21 +115,22 @@
     </div>
 
     <!-- Events Grid -->
-    <main class="max-w-7xl mx-auto px-6 pb-16">
+    <main class="max-w-[1400px] mx-auto px-6 lg:px-12 pb-20">
         <div id="loadingState" class="text-center py-16">
-            <p class="text-gray-400 text-sm font-medium">Loading events...</p>
+            <div class="inline-block w-12 h-12 border-4 border-purple-200 border-t-purple-600 rounded-full animate-spin"></div>
+            <p class="text-gray-500 text-sm font-medium mt-4">Loading events...</p>
         </div>
         
-        <div id="eventsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 hidden">
+        <div id="eventsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 hidden">
             <!-- Events populated by JS -->
         </div>
 
-        <div id="emptyState" class="hidden text-center py-16">
-            <div class="max-w-md mx-auto">
-                <i class="fas fa-calendar-times text-gray-300 text-5xl mb-4"></i>
-                <h3 class="text-xl font-semibold text-gray-700 mb-2">No events found</h3>
-                <p class="text-gray-500 text-sm">Try adjusting your filters</p>
+        <div id="emptyState" class="hidden text-center py-20">
+            <div class="inline-block p-6 bg-gray-50 rounded-full mb-4">
+                <i class="fas fa-calendar-times text-gray-300 text-5xl"></i>
             </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">No events found</h3>
+            <p class="text-gray-500">Try adjusting your filters or check back later</p>
         </div>
     </main>
 
@@ -129,6 +142,7 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('citySelector').value = currentCity;
+            updateCitySubtitle();
             loadEvents();
             
             document.getElementById('searchInput').addEventListener('input', filterEvents);
@@ -137,9 +151,20 @@
             document.getElementById('citySelector').addEventListener('change', onCityChange);
         });
 
+        function updateCitySubtitle() {
+            const cityNames = {
+                'sf': 'San Francisco',
+                'la': 'Los Angeles',
+                'nyc': 'New York City',
+                'chicago': 'Chicago'
+            };
+            document.getElementById('citySubtitle').textContent = cityNames[currentCity] || 'Multi-City Events';
+        }
+
         function onCityChange(e) {
             currentCity = e.target.value;
             localStorage.setItem('selectedCity', currentCity);
+            updateCitySubtitle();
             loadCityEvents();
         }
 
@@ -154,6 +179,7 @@
                 loadCityEvents();
             } catch (error) {
                 console.error('Error loading events:', error);
+                document.getElementById('loadingState').innerHTML = '<p class="text-rose-500 text-sm font-medium">Failed to load events</p>';
             }
         }
 
@@ -224,7 +250,7 @@
         function createEventCard(event) {
             const date = new Date(event.start_time);
             const formattedDate = date.toLocaleDateString('en-US', { 
-                weekday: 'short', month: 'short', day: 'numeric' 
+                month: 'short', day: 'numeric'
             });
             const formattedTime = date.toLocaleTimeString('en-US', { 
                 hour: 'numeric', minute: '2-digit' 
@@ -233,45 +259,52 @@
             const isPaid = event.price !== 'Free';
             
             return `
-                <div class="event-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+                <div class="event-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
                     <div class="relative h-64 bg-gray-100 overflow-hidden">
                         ${event.image ? `
                             <img src="${event.image}" alt="${event.title}" 
-                                 class="w-full h-full object-cover" 
-                                 onerror="this.parentElement.innerHTML='<div class=\\'h-full bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center\\'><i class=\\'fas fa-image text-gray-300 text-4xl\\'></i></div>'">
+                                 class="w-full h-full object-cover event-image" 
+                                 onerror="this.parentElement.innerHTML='<div class=\\'h-full bg-gradient-to-br from-purple-400 via-pink-400 to-indigo-400 flex items-center justify-center\\'><i class=\\'fas fa-calendar-star text-white text-5xl opacity-40\\'></i></div>'">
                         ` : `
-                            <div class="h-full bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-                                <i class="fas fa-image text-gray-300 text-4xl"></i>
+                            <div class="h-full bg-gradient-to-br from-purple-400 via-pink-400 to-indigo-400 flex items-center justify-center">
+                                <i class="fas fa-calendar-star text-white text-6xl opacity-40"></i>
                             </div>
                         `}
                         <div class="absolute top-4 right-4">
-                            <span class="px-3 py-1.5 rounded-full text-xs font-semibold ${isPaid ? 'bg-amber-50 text-amber-700' : 'bg-emerald-50 text-emerald-700'}">
+                            <span class="px-3 py-1.5 rounded-full text-xs font-semibold backdrop-blur-md ${isPaid ? 'bg-white/90 text-gray-900' : 'bg-emerald-500/90 text-white shadow-lg shadow-emerald-500/30'}">
                                 ${event.price}
                             </span>
                         </div>
                     </div>
                     
-                    <div class="p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-3 leading-tight line-clamp-2">${event.title}</h3>
+                    <div class="p-5">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs px-2.5 py-1 bg-purple-50 text-purple-700 rounded-lg font-semibold">
+                                ${event.source || 'Event'}
+                            </span>
+                            <span class="text-xs text-gray-500 font-medium">
+                                ${formattedDate}
+                            </span>
+                        </div>
                         
-                        <div class="space-y-2 mb-4 text-sm text-gray-600">
-                            <div class="flex items-center">
-                                <i class="fas fa-calendar w-4 text-gray-400"></i>
-                                <span class="ml-3">${formattedDate}</span>
-                            </div>
-                            <div class="flex items-center">
+                        <h3 class="text-base font-bold text-gray-900 mb-3 line-clamp-2 leading-snug group-hover:text-purple-600 transition">
+                            ${event.title}
+                        </h3>
+                        
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
                                 <i class="fas fa-clock w-4 text-gray-400"></i>
-                                <span class="ml-3">${formattedTime}</span>
+                                <span class="ml-2 font-medium">${formattedTime}</span>
                             </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-map-marker-alt w-4 text-gray-400"></i>
-                                <span class="ml-3 line-clamp-1">${event.location}</span>
+                            <div class="flex items-start text-sm text-gray-600">
+                                <i class="fas fa-map-marker-alt w-4 text-gray-400 mt-0.5"></i>
+                                <span class="ml-2 line-clamp-1 font-medium">${event.location}</span>
                             </div>
                         </div>
                         
                         <a href="${event.url}" target="_blank" 
-                           class="block w-full bg-gray-900 hover:bg-gray-800 text-white text-center px-6 py-3 rounded-xl text-sm font-semibold transition">
-                            View Event
+                           class="block w-full text-center btn-primary text-white px-4 py-2.5 rounded-xl text-sm font-semibold shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/35 transition">
+                            View Event →
                         </a>
                     </div>
                 </div>
